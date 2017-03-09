@@ -76,7 +76,9 @@ public class MainActivity extends Activity implements
         }
         initValue();
         mGPIOMgr.configureDIO(0, false);
+        mGPIOMgr.configureDIO(1, false);
         setDigitalOutputStatus(0, 1);
+        setDigitalOutputStatus(1, 1);
     }
 
     private void initValue() {
@@ -96,6 +98,7 @@ public class MainActivity extends Activity implements
             if (isArrive) {
                 timercountdown.destroy();
                 setDigitalOutputStatus(0, 0);
+                setDigitalOutputStatus(1, 0);
             }
         }
     };
